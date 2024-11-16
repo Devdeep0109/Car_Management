@@ -36,7 +36,9 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
-
+app.get("/", (req,res) => {
+    return res.status(200).json("Server Ready")
+})
 
 //routes....
 app.use("/api" ,userRoute)
